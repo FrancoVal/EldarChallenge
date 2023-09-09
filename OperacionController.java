@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class OperacionController {
-
+    //Utilizamos una operación POST pero pudimos usar un GET de la misma manera ya que podiamos pasar también un parametro String.
     @RequestMapping(value = "/operacion", method = RequestMethod.POST)
     public ResponseEntity<JsonObject> getOperacion(@RequestBody String body) throws Exception {
         JsonObject requestBody = new JsonParser().parse(body).getAsJsonObject();
